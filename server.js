@@ -339,7 +339,9 @@ socket.on('ANIMATION',function(_data){
 
 });//END_SOCKET.ON
 
-socket.on('DAMAGE',function(pack){
+socket.on('DAMAGE',function(_data){
+
+   var pack = JSON.parse(_data);
 
    var target = clientLookup[pack.id];
 
